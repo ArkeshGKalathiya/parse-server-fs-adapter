@@ -61,7 +61,7 @@ FileSystemAdapter.prototype.getFileData = function(filename) {
 }
 
 FileSystemAdapter.prototype.getFileLocation = function(config, filename) {
-  let mountPath = config.mount || config.mountPath;
+  let mountPath = config.serverURL;
   return mountPath + '/files/' + config.applicationId + '/' + encodeURIComponent(filename);
 }
 
